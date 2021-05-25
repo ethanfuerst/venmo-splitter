@@ -1,0 +1,5 @@
+urllib
+pandas
+tabulate
+plotly
+streamlit
