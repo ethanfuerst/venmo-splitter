@@ -8,8 +8,10 @@ Streamlit app to charge your friends after a night out.
 
 __*app.<span></span>py*__ - the meat of my application
 
+__*/functions/calculator.<span></span>py*__ - helper methods for backend of app
+
 __*Procfile, requirements.txt, setup.sh*__ - other files needed for app<span></span>.py to run with Heroku
 
-__*/functions/config.toml*__ - config file for streamlit app
+__*/.streamlit/config.toml*__ - config file for streamlit app
 
 __*push_heroku_changes.sh*__ - shell script to updated dashboard changes in Heroku
