@@ -2,7 +2,7 @@
 
 Streamlit app to charge your friends after a night out.
 
-[Link to dashboard](https://tidbitstatistics.com/bitcoin-dashboard/)
+[Link to dashboard](https://tidbitstatistics.com/venmo-splitter/)
 
 ## Files and folders in this repository
 
