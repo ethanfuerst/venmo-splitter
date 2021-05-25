@@ -1,0 +1,6 @@
+[logger]
+level = "debug"
+
+[theme]
+base="light"
+primaryColor="#00008b"
