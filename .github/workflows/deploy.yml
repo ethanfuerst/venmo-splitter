@@ -27,4 +27,4 @@ jobs:
           poetry install --no-root
 
       - name: Deploy Application
-        run: modal deploy serve_streamlit.py
+        run: poetry run modal deploy serve_streamlit.py
