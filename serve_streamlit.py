@@ -9,13 +9,7 @@ streamlit_script_remote_path = "/root/app.py"
 
 image = (
     modal.Image.debian_slim(python_version="3.11")
-    .pip_install(
-        "streamlit==1.12.0",
-        "pandas==2.2.3",
-        "plotly==5.24.1",
-        "altair==4.2.2",
-        "tabulate==0.9.0",
-    )
+    .poetry_install_from_file(poetry_pyproject_toml="pyproject.toml")
     .add_local_file(
         streamlit_script_local_path,
         streamlit_script_remote_path,
@@ -30,9 +24,8 @@ if not streamlit_script_local_path.exists():
     )
 
 
-@app.function(
-    allow_concurrent_inputs=100,
-)
+@app.function()
+@modal.concurrent(max_inputs=100)
 @modal.web_server(8000)
 def run():
     target = shlex.quote(streamlit_script_remote_path)
